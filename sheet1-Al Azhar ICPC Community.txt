@@ -1,0 +1,505 @@
+
+                                  "AHMEDDDDDD__________HESHAM__________________ATSHHHHHHHHHHHHHH"
+
+A. Say Hello With C++
+
+#include <iostream>
+using namespace std;
+int main() {
+    string s;cin>>s;
+    cout << "Hello, "<<s<< endl;
+    return 0;
+}
+===========================================
+B. Basic Data Types
+
+#include <iostream>
+using namespace std;
+int main() {
+    int i;cin>>i;
+    long long l;cin>>l;
+    char c;cin>>c;
+    float f;cin>>f;
+    double d;cin>>d;
+    cout <<i<< endl<<l<< endl<<c<< endl<<f<< endl<<d;
+    return 0;
+}
+=================================================
+C. Simple Calculator
+
+#include <iostream>
+using namespace std;
+int main() {
+  long long X,Y;cin>>X>>Y;
+  cout<<X<<" + " <<Y << " = "<<X+Y<<endl;
+  cout<<X<<" * " <<Y << " = "<<X*Y<<endl;
+  cout<<X<<" - " <<Y << " = "<<X-Y<<endl;
+ 
+    return 0;
+}===============================================
+
+D. Difference
+
+#include <iostream>
+using namespace std;
+int main() {
+  long long a,b,c,d;cin>>a>>b>>c>>d;
+  cout<< "Difference = "<<a*b - c*d;
+ 
+ 
+    return 0;
+}
+===============================================
+E. Area of a Circle
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+    cout << fixed << setprecision(9);
+   double r;cin>>r;
+   cout<< 3.141592653*r*r;
+}
+=============================================
+F. Digits Summation
+
+#include<iostream>
+using namespace std;
+int main()
+{
+   long long a,b;cin>>a>>b;
+   cout<<a%10 + b%10;
+}
+=============================================
+G. Summation from 1 to N
+
+#include<iostream>
+using namespace std;
+int main()
+{
+   long long n;cin>>n;
+   cout<<n*(n+1)/2;
+}
+============================================
+H. Two numbers
+
+#include<iostream>
+#include "math.h"
+using namespace std;
+int main()
+{
+   double a,b;cin>>a>>b;
+   cout<<"floor "<<a<<" / "<<b<<" = "<<floor(a/b)<< endl;
+    cout<<"ceil "<<a<<" / "<<b<<" = "<<ceil(a/b)<< endl;
+    cout<<"round "<<a<<" / "<<b<<" = "<<round(a/b)<< endl;
+}
+===============================================
+I. Welcome for you with Conditions
+
+#include<iostream>
+#include "math.h"
+using namespace std;
+int main()
+{
+   double a,b;cin>>a>>b;
+    (a>=b)?cout<<"Yes":cout<<"No";
+}
+=================================================
+
+J. Multiples
+
+#include<iostream>
+#include "math.h"
+using namespace std;
+int main()
+{
+   long long a,b;cin>>a>>b;
+    (b%a==0 || a%b==0)?cout<<"Multiples":cout<<"No Multiples";
+}
+==================================================
+K. Max and Min
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+    long long a,b,c;
+    cin>>a>>b>>c;
+  vector<int>v;
+  v.push_back(a);
+  v.push_back(b);
+  v.push_back(c);
+ 
+  cout<<*min_element(v.begin(), v.end())<<" "<<*max_element(v.begin(), v.end());
+ 
+ 
+}
+=====================================================
+L. The Brothers
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+    string a,b,c,d;
+    cin>>a>>b>>c>>d;
+    //(pow(log(a),b) >pow(log(c),d)) ?cout<<"YES" :cout<<"NO";
+    (b==d)?cout<<"ARE Brothers" :cout<<"NOT";
+ 
+ 
+}
+===========================================================
+M. Capital or Small or Digit
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+  char c;
+  cin>>c;
+  int x=c;
+  if(x>=65&&x<=90)
+  {
+      cout<<"ALPHA"<<endl<<"IS CAPITAL";
+  }
+  else if(x>=97 && x<=122)
+  {
+      cout<<"ALPHA"<<endl<<"IS SMALL";
+  }
+  else
+  {
+      cout<<"IS DIGIT";
+  }
+
+
+}
+========================================================
+N. Char
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+    char a;
+    cin>>a;
+    int x=a;
+    if(x<90)
+    {
+        cout<<char(tolower(a));
+    }
+    else
+        cout<<char(toupper(a));
+
+}
+===============================================================
+O. Calculator
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+#include <string>
+using namespace std;
+int main()
+{
+string s;cin>>s;
+string a="",b="";
+int x;
+bool f=false;
+for(int i=0;i<s.length();i++)
+{
+    if(s[i]=='*'||s[i]=='-'||s[i]=='/'||s[i]=='+')
+    {
+        x=i;
+        f=true;
+        i++;
+
+    }
+    if(f==false)
+    {
+        a+=s[i];
+    }
+    if(f== true)
+    {
+        b+=s[i];
+    }
+}
+if(s[x]=='+')cout<<stoi(a)+stoi(b);
+    if(s[x]=='-')cout<<stoi(a)-stoi(b);
+    if(s[x]=='*')cout<<stoi(a)*stoi(b);
+    if(s[x]=='/')cout<<stoi(a)/stoi(b);
+
+
+
+//cout<<a<<endl<<b;
+}
+===============================================================
+P. First digit !
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+int n;cin>>n;
+int x=n%1000;
+int v=(n-x) /1000;
+    (v%2==0)?cout<<"EVEN":cout<<"ODD";
+
+}
+================================================================
+
+Q. Coordinates of a Point
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+    double a,b;
+    cin>>a>>b;
+    if(a>0 && b>0)cout<<"Q1";
+    if(a<0 && b>0)cout<<"Q2";
+    if(a<0 && b<0)cout<<"Q3";
+    if(a>0 && b<0)cout<<"Q4";
+    if(a==0 && b==0)cout<<"Origem";
+    if(a==0 && b!=0)cout<<"Eixo Y";
+    if(a!=0 && b==0)cout<<"Eixo X";
+}
+====================================================================
+
+R. Age in Days
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+   int n;
+   cin>>n;
+   int y=n/365; //Years
+   int m=n%365 /30;
+   int d=n%365 - m*30;
+  cout<<y<<" years"<<endl<<m<<" months"<<endl<<d<<" days";
+}
+=====================================================================
+S. Interval
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+   double n;
+   cin>>n;
+    if(n>=0&&n<=25)cout<<"Interval [0,25]";
+    else if(n>25 && n<=50)cout<<"Interval (25,50]";
+    else if(n>50 && n<=75)cout<<"Interval (50,75]";
+    else if(n>75 && n<=100)cout<<"Interval (75,100]";
+    else cout<<"Out of Intervals";
+
+}
+===================================================================
+T. Sort Numbers
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+int a,b,c;
+cin>>a>>b>>c;
+int arr[]={a,b,c};
+sort(arr,arr+3);
+cout<<arr[0]<<endl;
+cout<<arr[1]<<endl;
+cout<<arr[2]<<endl;
+cout<<endl;
+cout<<a<<endl;
+cout<<b<<endl;
+cout<<c<<endl;
+
+
+}
+============================================================================
+U. Float or int
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+   double n;
+   cin>>n;
+  if(int(n)==n)cout<<"int "<<int(n);
+  else
+  {
+      cout<<"float "<<int(n)<<" "<<n-int(n);
+  }
+
+}
+==========================================================
+V. Comparison
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main() {
+    int a, b;
+    char c;
+    cin >> a >> c >> b;
+    if (c == '>') {
+        if (a > b)cout << "Right";
+        else cout << "Wrong";
+    }
+    if (c == '<') {
+        if (a < b)cout << "Right";
+        else cout << "Wrong";
+    }
+    if (c == '=') {
+        if (a == b)cout << "Right";
+        else cout << "Wrong";
+    }
+
+}
+============================================================
+W. Mathematical Expression
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+int a,b,c;
+char x,z;
+cin>>a>>x>>b>>z>>c;
+if(x=='+')
+{
+    if(a+b==c)cout<<"Yes";else cout<<a+b;
+}
+    if(x=='-')
+    {
+        if(a-b==c)cout<<"Yes";else cout<<a-b;
+    }
+    if(x=='*')
+    {
+        if(a*b==c)cout<<"Yes";else cout<<a*b;
+    }
+    if(x=='/')
+    {
+        if(a/b==c)cout<<"Yes";else cout<<a/b;
+    }
+
+}
+=====================================================
+X. Two intervals
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+    int l1,r1,l2,r2;
+ cin>>l1>>r1>>l2>>r2;
+
+    if( max(l2,l1)>min(r1,r2)  )
+    {
+        cout<<"-1";
+
+    }
+
+else
+    {
+        cout<<max(l2,l1)<<" "<<min(r1,r2);
+    }
+
+}
+==============================================================
+Y. The last 2 digits
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+    long long a,b,c,d;
+ cin>>a>>b>>c>>d;
+ int x=a%100*b%100*c%100*d%100;
+ if(x<10)
+ {
+     cout<<"0"<<x;
+ }
+ else
+ cout<<x;
+
+}
+==================================================================
+Z. Hard Compare
+
+#include<iostream>
+#include "math.h"
+#include "vector"
+#include "algorithm"
+using namespace std;
+int main()
+{
+    long long a,b,c,d;
+    cin>>a>>b>>c>>d;
+    //(pow(log(a),b) >pow(log(c),d)) ?cout<<"YES" :cout<<"NO";
+    (b*log(a)>d*log(c))?cout<<"YES" :cout<<"NO";
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
